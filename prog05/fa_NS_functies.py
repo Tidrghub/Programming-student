@@ -110,14 +110,12 @@ def test_standaardprijs():
 def test_ritprijs():
     case = collections.namedtuple('case', 'age weekend distance expected_output')
 
-    testcases = [ case(11, True, 50, 26.0), case(11, False, 50, 28.0), case(11, True, 51, 29.64), case(11, False, 51, 31.92),
-                  case(11, True, -51, 0.0), case(11, False, -51, 0.0), case(11, True, -10, 0.0),  case(11, False, -10, 0.0),
-                  case(12, True, 50, 24.0), case(12, False, 50, 40.0), case(12, True, 51, 27.36), case(12, False, 51, 45.6),
-                  case(12, True, -51, 0.0), case(12, False, -51, 0.0), case(12, True, -10, 0.0),  case(12, False, -10, 0.0),
-                  case(64, True, 50, 24.0), case(64, False, 50, 40.0), case(64, True, 51, 27.36), case(64, False, 51, 45.6),
-                  case(64, True, -51, 0.0), case(64, False, -51, 0.0), case(64, True, -10, 0.0),  case(64, False, -10, 0.0),
-                  case(65, True, 50, 26.0), case(65, False, 50, 28.0), case(65, True, 51, 29.64), case(65, False, 51, 31.92),
-                  case(65, True, -51, 0.0), case(65, False, -51, 0.0), case(65, True, -10, 0.0),  case(65, False, -10, 0.0) ]
+    testcases = [ case(11, True,  50, 26.0),  case(11, False,  50, 28.0),  case(11, True,  51, 29.64), case(11, False, 51, 31.92),
+                  case(11, True, -51,  0.0),  case(11, False, -51,  0.0),  case(12, True,  50, 24.0),  case(12, False, 50, 40.0), 
+                  case(12, True,  51, 27.36), case(12, False,  51, 45.6),  case(12, True, -51,  0.0),  case(12, False, -51, 0.0), 
+                  case(64, True,  50, 24.0),  case(64, False,  50, 40.0),  case(64, True,  51, 27.36), case(64, False, 51, 45.6),
+                  case(64, True, -51,  0.0),  case(64, False, -51,  0.0),  case(65, True,  50, 26.0),  case(65, False, 50, 28.0), 
+                  case(65, True,  51, 29.64), case(65, False,  51, 31.92) ]
 
     for test in testcases:
         __my_assert_args(ritprijs, (test.age, test.weekend, test.distance), test.expected_output)
