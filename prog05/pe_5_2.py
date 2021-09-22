@@ -14,7 +14,6 @@ Bart van Eijkelenburg (bart.vaneijkelenburg@hu.nl)
 Opdracht:
 Werk onderstaande functie(s) uit.
 Voeg commentaar toe om je code toe te lichten.
-Lever je werk in op Canvas als alle tests slagen.
 """
 
 
