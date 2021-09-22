@@ -90,7 +90,6 @@ def __run_tests():
             print(f"Je functie {func_name} werkt goed!")
 
         print("\nGefeliciteerd, alles lijkt te werken!")
-        print("Lever je werk nu in op Canvas...")
 
     except NameError as e:
         print(f"Fout: {e.args[0]}. Ben je misschien quotes om een string vergeten? Of heb je een (functie)naam verkeerd gespeld/gewijzigd?")
