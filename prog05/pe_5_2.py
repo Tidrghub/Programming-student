@@ -65,7 +65,7 @@ def __my_assert_args(function, args, expected_output, check_type=False):
     else:
         msg = f"Fout: {function.__name__}{argstr} geeft {output} in plaats van {expected_output}"
 
-    if type(expected_output) is float:
+    if type(expected_output) is float and isinstance(output, (int, float, complex)):
         # Vergelijk bij float als return-type op 7 decimalen om afrondingsfouten te omzeilen
         assert round(output - expected_output, 7) == 0, msg
     else:
