@@ -63,7 +63,12 @@ def __my_assert_args(function, args, expected_output, check_type=False):
         assert type(output) is type(expected_output), msg
 
     # Controleer of de functie-uitvoer overeenkomt met de gewenste uitvoer
-    msg = f"Fout: {function.__name__}{argstr} geeft {output} in plaats van {expected_output}"
+    if str(expected_output) == str(output):
+        msg = f"Fout: {function.__name__}{argstr} geeft {output} ({type(output).__name__}) " \
+              f"in plaats van {expected_output} (type {type(expected_output).__name__})"
+    else:
+        msg = f"Fout: {function.__name__}{argstr} geeft {output} in plaats van {expected_output}"
+
     if type(expected_output) is float:
         # Vergelijk bij float als return-type op 7 decimalen om afrondingsfouten te omzeilen
         assert round(output - expected_output, 7) == 0, msg
