@@ -103,8 +103,6 @@ def __run_tests():
 
         print("\nGefeliciteerd, alles lijkt te werken!")
 
-    except NameError as e:
-        print(f"Fout: {e.args[0]}. Ben je misschien quotes om een string vergeten? Of heb je een (functie)naam verkeerd gespeld/gewijzigd?")
     except AssertionError as e:
         print(e.args[0])
     except Exception as e:
