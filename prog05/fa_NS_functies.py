@@ -50,7 +50,7 @@ def ritprijs(leeftijd, weekendrit, afstandKM):
        deze leeftijdsgroep met 40% korting.
 
     Args:
-        leeftijd (int): De leeftijd in gehele jaren.
+        leeftijd (int): De leeftijd van de reiziger in gehele jaren.
         weekendrit (bool): True als het een rit in het weekend betreft, anders False.
         afstandKM (int): De reisafstand in kilometers.
     Returns:
