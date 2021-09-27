@@ -151,7 +151,7 @@ def test_inlezen_eindstation():
         original_input = builtins.input
         simulated_input = test.simulated_input.copy()
         simulated_input.reverse()
-        builtins.input = lambda prompt: simulated_input.pop()
+        builtins.input = lambda prompt="": simulated_input.pop()
 
         try:
             eindstation = inlezen_eindstation(stations, test.start)
