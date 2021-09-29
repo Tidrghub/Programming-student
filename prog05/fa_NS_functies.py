@@ -17,8 +17,16 @@ Voeg commentaar toe om je code toe te lichten.
 Lever je werk in op Canvas als alle tests slagen.
 """
 
-
+afstandKM = int(input("Wat is de reisafstand in kilometers?"))
 def standaardprijs(afstandKM):
+        if afstandKM < 50:
+        return(0.80*afstandKM)
+    elif afstandKM < 0:
+        return 0
+    else:
+        return(0.60*afstandKM + 15)
+ print(standaardprijs(afstandKM))
+    
     """
     Bepaal de prijs van een treinrit. Iedere treinrit kost 80 cent per kilometer,
     maar als de rit langer is dan 50 kilometer betaal je een vast bedrag van €15,-
@@ -32,10 +40,22 @@ def standaardprijs(afstandKM):
     Returns:
         float: De berekende standaardprijs.
     """
-    return
-
+leeftijd = int(input("Wat is uw leeftijd?"))
+weekendrit = bool(input("Reist u in het weekend? (Ja of Nee)"))
 
 def ritprijs(leeftijd, weekendrit, afstandKM):
+    standaardprijs(afstandKM)
+    Ja = True
+    Nee = False
+    if weekendrit == False and leeftijd <= 12 or leeftijd >= 65:
+        return (standaardprijs(afstandKM)*0.7)
+    elif weekendrit == True and leeftijd <= 12 or leeftijd >= 65:
+        return (standaardprijs(afstandKM)*0.65)
+    elif weekendrit == False and leeftijd > 12 or leeftijd < 65:
+        return (standaardprijs(afstandKM))
+    elif weekendrit == True and leeftijd > 12 or leeftijd < 65:
+        return (standaardprijs(afstandKM)*0.6)
+print(ritprijs(leeftijd,weekendrit,afstandKM))
     """
     Het eerste wat deze functie moet doen, is het aanroepen van
     functie standaardprijs, waarbij de afstand in kilometers doorgegeven
@@ -56,7 +76,6 @@ def ritprijs(leeftijd, weekendrit, afstandKM):
     Returns:
         float: De berekende ritprijs.
     """
-    return
 
 
 def development_code():
